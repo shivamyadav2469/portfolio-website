@@ -56,12 +56,12 @@ a{
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
-
   padding: 10px 10px 10px 10px;
 }
 
 .nav > .nav-btn {
   display: none;
+  cursor: pointer;
 }
 
 .nav > .nav-links {
@@ -89,6 +89,7 @@ a{
 
 .nav > #nav-check {
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width:600px) {
@@ -96,7 +97,7 @@ a{
     display: inline-block;
     position: absolute;
     right: 0px;
-    top: 1rem;
+    top: rem;
   }
   .nav > .nav-btn > label {
     display: inline-block;
@@ -117,13 +118,17 @@ a{
     position: absolute;
     display: block;
     width: 100%;
+    cursor: pointer;
     background-color: rgba(128, 128, 128, 0.748);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    top: 70px;
     left: 0px;
+    display: block;
   }
+
+
   .nav > .nav-links > a {
     display: block;
     width: 100%;
@@ -566,15 +571,15 @@ a{
   }
 
   #project1{
-    background-image: url(./images/projects/Project1.png);
+    background-image: url(./images/projects/Project5.png);
   }
 
   #project2{
     margin-left:120px;
-    background-image: url(./images/projects/Project2.png);
+    background-image: url(./images/projects/Project6.png);
   }
   #project3{
-    background-image: url(./images/projects/Project3.png);
+    background-image: url(./images/projects/Project7.png);
   }
   #project4{
     margin-left:120px;
