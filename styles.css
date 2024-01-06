@@ -20,18 +20,19 @@
 .container{
     width:1200px;
     margin:0 auto;
+  
 }
 
-.nav {
-  padding-top:1rem;
-  height: 50px;
-  width: 100%;
-  position: relative;
+.navbar{
+  display: flex;
+  justify-content:space-between;
   align-items:center;
+  padding-top:1rem;
+  /* background-color: rgba(128, 128, 128, 0.112); */
 }
+
 .logo{
   width:80px;
-  margin-top: -0.4rem;
 }
 
 .logo-container{
@@ -45,100 +46,65 @@
   font-size:28px;
 }
 
-a{
-  text-decoration: none;
-} 
-
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-  cursor: pointer;
-}
-
-.nav > .nav-links {
-  color:black;
-  display: inline;
-  float: right;
-  font-size:20px;
-  font-weight:500;
-  cursor:pointer;
+.nav-items{
+  display:flex;
   gap:2rem;
   padding: 0 4em;
 }
 
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
+.nav-items div{
+  font-size:20px;
+  font-weight:500;
+  cursor:pointer;
+ 
+}
+.nav-items div a{
+  color:black;
+  /* transition: all 5s ease; */
+}
+
+a{
   text-decoration: none;
-  
 }
 
-.nav > .nav-links > a:hover {
-  /* background-color: transparent; */
-  color: red;
+
+.nav-items div:hover{
+  transition:0.8s;
+  font-weight: bold;
 }
 
-.nav > #nav-check {
-  display: none;
-  cursor: pointer;
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .nav-items div {
+    font-size: 18px;
+  }
+  .logo-text{
+    font-size: 20px;
+  }
+  .logo{
+    display: none;
+  }
 }
-
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: rem;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.748);
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 70px;
-    left: 0px;
-    display: block;
-  }
-
-
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: hidden;
+@media only screen and (max-width: 600px) {
+  .logo-container{
+    display: none;
   }
 }
 
